@@ -1,3 +1,10 @@
+#After going through a number of codes on Google, i found his code that would help you to delete all your messages from Linkedin.
+#Steps:
+# Go to your Linkedin Profile and click on messaging tab. Click on Top Message.
+# Than open chrome console. (ctrl+shift+I)
+# And finally paste the below code snippent and press enter.
+
+
 ;(function () {
   setInterval(() => {
     let deleted = false;
