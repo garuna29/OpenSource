@@ -1,0 +1,23 @@
+;(function () {
+  setInterval(() => {
+    let deleted = false;
+    let dropdowns = document.querySelectorAll('artdeco-dropdown-item');
+    for (let i = 0; i < dropdowns.length; i++){
+      let txt = dropdowns[i].textContent.trim();
+      if (txt === 'Delete') {
+        deleted = true;
+        dropdowns[i].click();
+      }      
+    }
+    if (deleted){
+      setTimeout(() => {
+        let messageModal = document.querySelector('.msg-modal-delete-convo');
+        let deleteBtn = messageModal.querySelector('.artdeco-button--primary');
+        deleteBtn.click();
+      }, 500)
+    } else {
+      let messageConverstionCard = document.querySelector('.msg-conversation-card__list-action-icon');
+      messageConverstionCard.click();
+    }
+  }, 1000);
+}());
